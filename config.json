@@ -1,0 +1,72 @@
+{
+  "_comment": "Her ayarin 'value' ve 'description' alani var. GUI'de mouse-over ile description gosterilecek (ileride).",
+
+  "engine_path": {
+    "value": "/usr/games/stockfish",
+    "description": "Stockfish binary dosyasinin tam yolu. Linux'ta 'which stockfish' veya indirdigin binary'nin yolu."
+  },
+  "threads": {
+    "value": 4,
+    "description": "Stockfish'in kullanacagi CPU cekirdek/thread sayisi. Genelde makinendeki fiziksel cekirdek sayisina esit veya 1 eksigi (sistemi kilitlememek icin)."
+  },
+  "hash_mb": {
+    "value": 512,
+    "description": "Stockfish'in transposition table (hash) icin ayiracagi RAM (MB). Ne kadar buyukse arama o kadar verimli, ama toplam RAM'ini asmamali. 4GB RAM'de 512-1024 MB guvenli."
+  },
+  "multipv": {
+    "value": 3,
+    "description": "Stockfish'ten ayni pozisyon icin kac farkli en-iyi-hamle istenecegi. 'Mukemmel/Harika/Iyi' kategorileri bu N hamle icinden cikar. Sen istersen 4-5 yapabilirsin, ama arama suresi orantili uzar."
+  },
+  "time_per_node_seconds": {
+    "value": 5,
+    "description": "TEST modunda her pozisyona harcanacak analiz suresi (saniye). Gercek/derin koşu icin bunu 1800-7200 (30dk-2sa) gibi degerlere cekebilirsin. Depth yerine sure kullanmak farkli pozisyonlarda daha adil sonuc verir."
+  },
+  "deep_dive_seconds": {
+    "value": 7200,
+    "description": "Ozellikle supheli/kritik bir pozisyonu 'gercekten sonuna kadar' incelemek istedigin zaman kullanilan sure siniri (saniye). 7200 = 2 saat. Istersen 36000 (10 saat) yapabilirsin, sinir sende."
+  },
+  "max_ply": {
+    "value": 4,
+    "description": "Aciligin koku disinda, agacin kac yarim-hamle (ply) daha derine inecegi. 1 hamle = 2 ply. TEST icin kucuk tut (4-6), gercek koşuda 12-16 (6-8 hamle) mantikli olur -- her ply kombinasyonlari katlar."
+  },
+  "excellent_cp_margin": {
+    "value": 15,
+    "description": "'Mukemmel' etiketi icin en iyi hamleden izin verilen maksimum centipawn (yuzdelik piyon) farki. 0-15 arasi = mukemmel sayilir."
+  },
+  "great_cp_margin": {
+    "value": 40,
+    "description": "'Harika' etiketi icin en iyi hamleden izin verilen maksimum centipawn farki."
+  },
+  "good_cp_margin": {
+    "value": 80,
+    "description": "'Iyi' etiketi icin en iyi hamleden izin verilen maksimum centipawn farki."
+  },
+  "trap_cp_min": {
+    "value": 80,
+    "description": "'Tuzak/yanlislik' hamlesi sayilmasi icin en iyi hamleden en AZ bu kadar centipawn kotu olmali (good_cp_margin ile ayni deger onerilir, yani 'iyi' bandinin hemen disinda basliyor)."
+  },
+  "trap_cp_max": {
+    "value": 250,
+    "description": "Tuzak hamlesinin en iyi hamleden en FAZLA bu kadar kotu olmasina izin verilir. Bunun ustu ciddi hata sayilir ve dahil edilmez (pozisyonu gercekten kaybettirir, ogretici tuzak degildir)."
+  },
+  "trap_scan_depth": {
+    "value": 12,
+    "description": "Tuzak adaylarini bulmak icin yapilan HIZLI on-tarama derinligi (ply). Bu tarama tum legal hamleleri ucuz sekilde eler, sonra adaylar time_per_node_seconds ile tam analiz edilir."
+  },
+  "min_eval_to_continue_cp": {
+    "value": -300,
+    "description": "Bir dal, en iyi hamleye gore bu degerden daha kotu bir pozisyona dusmusse agac o daldan devam ettirilmez (zaten kaybedilmis pozisyonu derinlestirmenin anlami yok). Centipawn, negatif = kotu."
+  },
+  "trap_candidates_root": {
+    "value": 2,
+    "description": "Kok pozisyonda (ilk hamle) tam analiz edilecek tuzak aday sayisi."
+  },
+  "trap_candidates_floor": {
+    "value": 0,
+    "description": "En derin ply'da tam analiz edilecek minimum tuzak aday sayisi. 0 = derinlerde tuzak aramayi tamamen birak (hiz icin)."
+  },
+  "multipv_floor": {
+    "value": 1,
+    "description": "En derin ply'da kullanilacak minimum multipv (iyi hamle) sayisi. Kokteki 'multipv' degerinden buraya dogru dogrusal azalir -- dallanmayi derinlikle kirip agac buyumesini yavaslatir."
+  }
+}

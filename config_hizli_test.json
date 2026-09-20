@@ -1,0 +1,70 @@
+{
+  "engine_path": {
+    "value": "/usr/games/stockfish",
+    "description": "x"
+  },
+  "threads": {
+    "value": 4,
+    "description": "x"
+  },
+  "hash_mb": {
+    "value": 256,
+    "description": "x"
+  },
+  "multipv": {
+    "value": 2,
+    "description": "x"
+  },
+  "time_per_node_seconds": {
+    "value": 1,
+    "description": "x"
+  },
+  "deep_dive_seconds": {
+    "value": 60,
+    "description": "x"
+  },
+  "max_ply": {
+    "value": 2,
+    "description": "x"
+  },
+  "excellent_cp_margin": {
+    "value": 15,
+    "description": "x"
+  },
+  "great_cp_margin": {
+    "value": 40,
+    "description": "x"
+  },
+  "good_cp_margin": {
+    "value": 80,
+    "description": "x"
+  },
+  "trap_cp_min": {
+    "value": 80,
+    "description": "x"
+  },
+  "trap_cp_max": {
+    "value": 250,
+    "description": "x"
+  },
+  "trap_scan_depth": {
+    "value": 8,
+    "description": "x"
+  },
+  "min_eval_to_continue_cp": {
+    "value": -300,
+    "description": "x"
+  },
+  "trap_candidates_root": {
+    "value": 2,
+    "description": "x"
+  },
+  "trap_candidates_floor": {
+    "value": 0,
+    "description": "x"
+  },
+  "multipv_floor": {
+    "value": 1,
+    "description": "x"
+  }
+}
